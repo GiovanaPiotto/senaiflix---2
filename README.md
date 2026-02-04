@@ -1,255 +1,303 @@
-//# Meu primeiro repositorio 
-Feito na aula de Git e GitHub//
+#HTML
 
 <!DOCTYPE html>
-<html Lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Primeira Página HTML + CSS</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <header class="topo">
-
-        <img src="" alt="Logotipo da Pagina" class="logo" />
-
-        <h1>HTML + CSS: Fundamentos</h1>
-        <p class="subtitulo">Estrutura, tags básicas, seletores e box model</p>
-        <nav aria-label="Navegação principal">
-            <ul class="menu">
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#conteúdo">Conteúdo</a></li>
-                <li><a href="#tabela">Tabela</a></li>
-                <li><a href="contato">Contato</a></li>
-            </ul>
-        </nav>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SENAIFLIX - Filmes e Séries</title>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="../assets/styles/global.css">
+  </head>
+  <body>
+    <header class="cabecalho">
+      <a href="index.html">SENAIFLIX</a>
+      <img id="menu-btn" class="hamburger-menu" src="../assets/icons/material-symbols_menu (1).png" alt="">
+      <nav>
+        <a href="#">Início</a>
+        <a href="#titulo-filmes">Filmes</a>
+        <a href="#titulo-series">Séries</a>
+      </nav>
+      <nav class="menu-mobile" id="menu-mobile">
+        <a href="#">Início</a>
+        <a href="#titulo-filmes">Filmes</a>
+        <a href="#titulo-series">Séries</a>
+      </nav>
     </header>
-    <main class="container">
-        <section id="sobre" class="card">
-            <h2>Sobre esta página</h2>
-            <p>Esta é uma página de exemplo para ensinar <strong>HTML</strong> e <em>CSS</em> do zero. Observe a
-                estrutura do código, os comentários e o estilo aplicado</p>
-            <h3>O que vamos ver:</h3>
-            <ul>
-                <li>Estrutura básica do HTML</li>
-                <li>Seletores CSS: elemento, classe e id</li>
-                <li>Box model: margin, padding e border</li>
-                <li>Links, imagens, listas e tabelas</li>
-                <li>Formulário simples e responsividade</li>
-            </ul>
-            <p>
-                Dica: consulte a documentação do MDN
-                <a href="https://developer.mozilla.org/en-US/" target="_blank">aqui
-                </a>
-            </p>
+    <main>
+      <section class="banner">
+        <div class="div-banner">
+          <h2>Assista agora!</h2>
+          <p>
+            Ao saber que tem câncer, um professor passa a fabricar metanfetamina
+            pelo futuro da família, mudando o destino de todos.
+          </p>
+        </div>
+      </section>
+      <div class="inputs">
+        <div class="pesquisa">
+          <label for="pesquisar">Pesquise por filmes e/ou séries:</label>
+          <input type="text" placeholder="Insira um título" id="pesquisar" />
+        </div>
 
-        </section>
-
-        <section id="conteudo" class="card">
-            <h2>Conceitos de CSS essenciais</h2>
-            <article class="caixa">
-                <h3>Seletores &amp; Especificidade</h3>
-                <p>Regras CSS podem mirar em elemento, classes ou ids
-                    Quando há conflito, o navegador escolhe pela prioridade:
-                    id > class > elemento
-                </p>
-                <p id="destaque">Este parágrafo tem um ID para destaque</p>
-            </article>
-
-            <article class="caixa">
-                <h3>Box Model</h3>
-                <p>Todo elemento em bloco possui content, padding, border e margin.
-                </p>
-                <div class="box-model-demo">Sou uma caixa</div>
-            </article>
-            <article class="caixa">
-                <h3>Display: inline vs block</h3>
-                <p><span class="tag-inline">span inline </span>fica na linha,
-                    enquanto elementos quebram linha.</p>
-            </article>
-        </section>
-
-        <!--Seção Tabela-->
-        <section id="tabela" class="card">
-            <h2>Tabela de horários (exemplo)</h2>
-            <table class="tabela">
-                <thead>
-                    <tr>
-                        <th>Dia</th>
-                        <th>Conteúdo</th>
-                        <th>Duração</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Segunda</td>
-                        <td>Estrutura HTML</td>
-                    </tr>
-                    <tr>
-                        <td>Quarta</td>
-                        <td>Seletores e Box Model</td>
-                    </tr>
-                    <tr>
-                        <td>Sexta</td>
-                        <td>Formulário e Responsivo</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!--Seção Formulário-->
-        <section id="contato" class="card">
-            <h2>Fale conosco</h2>
-            <form action="#" class="formulario" method="post">
-                <div class="grupo">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-                </div>
-                <div class="grupo">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="seuemail@email.com" required>
-                </div>
-                <div class="grupo">
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem"></textarea>
-                </div>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
+        <div class="filtro">
+          <label for="genero">Filtrar por gênero:</label>
+          <select name="genero" id="genero">
+            <option selected value="">Selecione um gênero</option>
+            <option value="Drama">Drama</option>
+            <option value="Romance">Romance</option>
+            <option value="Terror">Terror</option>
+            <option value="Ficção científica">Ficção científica</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Ação">Ação</option>
+            <option value="Comédia">Comédia</option>
+            <option value="Animação">Animação</option>
+            <option value="Aventura">Aventura</option>
+            <option value="Crime">Crime</option>
+            <option value="Fantasia">Fantasia</option>
+            <option value="Mistério">Mistério</option>
+            <option value="Sci-Fi & Fantasy">Sci-Fi & Fantasy</option>
+          </select>
+          <button id="limpar-filtro" class="limpar-filtros">Limpar filtros</button>
+        </div>
+      </div>
+      <section class="filmes-series">
+        <h2 id="titulo-filmes">Filmes</h2>
+        <div id="filmes-container" class="card-container">
+          <a href="../detalhes-do-filme/index.html" class="card"></a>
+          <a href="../detalhes-do-filme/index.html" class="card"></a>
+          <a href="../detalhes-do-filme/index.html" class="card"></a>
+          <a href="../detalhes-do-filme/index.html" class="card"></a>
+          <a href="../detalhes-do-filme/index.html" class="card"></a>
+          <a href="../detalhes-do-filme/index.html" class="card"></a>
+        </div>
+      </section>
+      <section class="filmes-series">
+        <h2 id="titulo-series">Séries</h2>
+        <div id="series-container" class="card-container">
+          <a href="../detalhes-do-filme/index.html" class="card"></a>
+          <a href="../detalhes-do-filme/index.html" class="card"></a>
+          <a href="../detalhes-do-filme/index.html" class="card"></a>
+          <a href="../detalhes-do-filme/index.html" class="card"></a>
+          <a href="../detalhes-do-filme/index.html" class="card"></a>
+          <a href="../detalhes-do-filme/index.html" class="card"></a>
+        </div>
+      </section>
     </main>
-     <!--Rodapé-->
-    <footer class="rodape">
-       <small>&copy; 2025 . Página didática para aula de HTML + CSS</small>
+    <footer>
+      <p>Nos sigam nas redes sociais</p>
+      <div class="imgs">
+        <img src="../assets/imgs/mdi_twitter.svg" alt="Logo do Twitter" />
+        <img
+          src="../assets/imgs/ri_instagram-fill.svg"alt="Logo do Instagram"/>
+        <img src="../assets/imgs/mdi_youtube.svg" alt="Logo do Youtube" />
+      </div>
+    </footer>
+  </body>
+
+  <script src="../scripts/script.js"></script>
+</html>
 
 
 
-       //CSS
 
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+#CSS
+
+.banner {
+    background-image: url("../assets/imgs/Banner-BB.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
 }
 
-html, body {
-    height: 100%;
+.div-banner {
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    gap: 20px;
 }
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
-  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.5;
-  background: #f6f7fb;
-  color: #1f2937;
+.div-banner p {
+    font-size: 1.5em;
 }
 
-:root {
-  --cor-primaria: #0ea5e9;
-  --cor-secundaria: #f59e0b;
-  --fundo-card: #ffffff;
-  --borda-card: #e5e7eb;
-  --fundo-tabela: #f1f5f9;
+.div-banner h2 {
+    font-size: 2.5em;
 }
 
-h1,
-h2,
-h3 {
- line-height: 1.2;
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-h1 {
-    font-size: 2rem;
-    margin: 0.2rem 0;
+.inputs {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    gap: 100px;
 }
 
-h2 {
-    font-size: 1.5rem;
-    margin: 0 0 0.5rem;
+.filtro, .pesquisa  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
 }
 
-h3 {
-    font-size: 1.125rem;
-    margin: 0.5rem 0;
+button {
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
 }
 
-p {
- margin: 0.6rem 0;
+button, input, select {
+    height: 30px;
+    width: 250px;
+
+    background-color: #000000;
+    border-radius: 7px;
+    border: 1px solid #ffffff;
+    padding: 5px;
+    color: #ffffff;
 }
 
-a {
- color: var(--cor-primaria);
- text-decoration: none;
+.filmes-series {
+    padding: 50px;
 }
 
-a:hover
-a:focus {
-  text-decoration: underline;
+.filmes-series h2{
+    font-size: 1.5em;
 }
 
-a:active {
-  opacity: 0.8;
-}
+.card-container {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
 
-.topo {
-  padding: 1rem;
-  text-align: center;
-  background: linear-gradient(180deg, rgba(14, 165, 233, 0.15), transparent);
-}
-
-.logo {
-  width: 120px;
-  height: 60px;
-  background: var(--cor-primaria);
-  color: var(--fundo-card);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  letter-spacing: 1px;
-  border-radius: 6px;
-  margin: 0 auto 0.5rem;
-}
-
-.subtitulo {
-  color: #475569;
-  margin-top: 0;
-}
-
-.menu {
-  list-style: none;
-  padding: 0;
-  margin: 0.8rem 0 0;
-  display: flex;
-  gap: 0.75rem;
-  justify-content: center;
-}
-
-.menu a {
-  display: inline-block;
-  padding: 0.5rem 0.8rem;
-  border-radius: 0.5rem;
-  background: var(--fundo-card);
-  border: 1px solid #e5e7eb;
-}
-
-.menu a:hover {
-    background: #f8fafc;
-}
-
-.container {
-  max-width: 960px;
-  margin: 1.2rem;
-  padding: 0 1rem;
+    display: flex;
+    gap: 20px;
 }
 
 .card {
-  background: var(--fundo-card);
-  border: 1px solid var(--borda-card);
-  padding: 1rem;
+    height: 180px;
+    width: 120px;
+
+    background-image: url("../assets/imgs/eassimqueacaba.webp");
+    background-size: cover;
+    margin-right: 10px;
+    border-radius: 7px;
 }
-    </footer>
-</body>
-</html>
+
+.menu-mobile{
+    display: none;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1023px){
+
+    .inputs {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .inputs label {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .inputs input,
+    .inputs select,
+    .inputs button,
+    .pesquisa {
+        width: 100%;
+        height: 40px;
+    }
+
+    .filtro {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .card-container {
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 40px;
+    }
+
+    .card {
+        width: 40%;
+        height: auto;
+        aspect-ratio: 2 / 3;
+    }
+
+    .menu-mobile {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: #111;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    
+    .menu-mobile a {
+        color: white;
+        text-decoration: none;
+        margin: 10px 0;
+    }
+    
+
+}
+
+@media (max-width: 768px){
+    .banner {
+        height: 450px;
+        padding: 0 20px;
+        background-position: center top;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .div-banner{
+        max-width: 80%;
+        align-items: center;
+    }
+
+    .div-banner h2 {
+        font-size: 2em;
+    }
+
+    .div-banner p {
+        font-size: 1.1em;
+    }
+
+    .filmes-series {
+        padding: 30px 20px;
+    }
+
+    .filmes-series h2{
+        margin-left: 10%;
+        margin-bottom: 20px;
+    }
+
+    .card-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
